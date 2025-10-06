@@ -12,11 +12,23 @@ if not os.path.exists("logs"):
     os.makedirs("logs")
 
 # Logging ayarı
+from logging.handlers import RotatingFileHandler
+
+# logs klasörünü oluştur (yoksa)
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+# Rotating handler (maks 100 KB, 5 yedek dosya)
+handler = RotatingFileHandler(
+    "logs/blockchain.log", maxBytes=100000, backupCount=5, encoding="utf-8"
+)
+
 logging.basicConfig(
-    filename="logs/blockchain.log",
+    handlers=[handler],
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
 
 
 from typing import List, Dict
