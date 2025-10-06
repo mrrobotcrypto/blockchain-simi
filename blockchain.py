@@ -4,11 +4,20 @@ import time
 import logging
 
 # Logging ayarı
+import os
+import logging
+
+# logs klasörünü oluştur (yoksa)
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+# Logging ayarı
 logging.basicConfig(
-    filename="blockchain.log",
+    filename="logs/blockchain.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
 
 from typing import List, Dict
 
