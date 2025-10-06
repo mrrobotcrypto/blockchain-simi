@@ -1,6 +1,15 @@
 import hashlib
 import json
 import time
+import logging
+
+# Logging ayarı
+logging.basicConfig(
+    filename="blockchain.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 from typing import List, Dict
 
 
