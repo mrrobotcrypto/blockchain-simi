@@ -90,14 +90,28 @@ class Blockchain:
             "amount": amount
         })
 
-    def mine_pending_transactions(self, miner_address: str):
-        block = Block(len(self.chain), self.get_latest_block().hash, self.pending_transactions)
-        block.mine_block(self.difficulty)
-        self.chain.append(block)
-        self.pending_transactions = [
-            {"from": "SYSTEM", "to": miner_address, "amount": self.mining_reward}
-        ]
-        self.save_chain()
+
+def mine_pending_transactions(self, miner_address: str):
+    block = Block(len(self.chain), self.get_latest_block().hash, self.pending_transactions)
+    block.mine_block(self.difficulty)
+
+    # Zincire ekleme
+    self.chain.append(block)
+    self.pending_transactions = [
+        {"from": "SYSTEM", "to": miner_address, "amount": self.mining_reward}
+    ]
+    self.save_chain()
+
+    # Loglama ekle
+    logging.info(f"Block mined and added to chain. Index: {block.index}")
+
+    # Zincir doğruluğunu kontrol et
+    if not self.is_chain_valid():
+        logging.warning("Chain integrity might be compromised after mining!")
+    
+
+
+
 
     def get_balance(self, address: str) -> float:
         balance = 0
