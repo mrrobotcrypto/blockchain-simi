@@ -6,19 +6,15 @@ import logging
 from typing import List, Dict
 from logging.handlers import RotatingFileHandler
 
-
 # --- LOGGING SYSTEM INITIALIZATION ---
 LOG_DIR = "logs"
 LOG_FILE = os.path.join(LOG_DIR, "blockchain.log")
 
-# Klasör yoksa oluştur
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
 
-# Rotating handler (100 KB, 3 yedek)
 handler = RotatingFileHandler(LOG_FILE, maxBytes=100000, backupCount=3, encoding="utf-8")
 
-# Logging yapılandırması (hem dosya hem terminal)
 logging.basicConfig(
     handlers=[handler, logging.StreamHandler()],
     level=logging.INFO,
@@ -30,14 +26,14 @@ logging.info("✅ Logging system initialized.")
 
 # --- BLOCK CLASS ---
 class Block:
-    def __init__(self, index: int, previous_hash: str, transactions: List[Dict], timestamp=None, nonce=0, hash=None):
-    self.index = index
-    self.previous_hash = previous_hash
-    self.transactions = transactions
-    self.timestamp = timestamp or time.time()
-    self.nonce = nonce
-    self.hash = hash or self.calculate_hash()
-
+    def __init__(self, index: int, previous_hash: str, transactions: List[Dict],
+                 timestamp=None, nonce=0, hash=None):
+        self.index = index
+        self.previous_hash = previous_hash
+        self.transactions = transactions
+        self.timestamp = timestamp or time.time()
+        self.nonce = nonce
+        self.hash = hash or self.calculate_hash()
 
     def calculate_hash(self) -> str:
         """Blok içeriğinden SHA-256 hash üretir."""
@@ -102,17 +98,14 @@ class Blockchain:
         block = Block(len(self.chain), self.get_latest_block().hash, self.pending_transactions)
         block.mine_block(self.difficulty)
 
-        # Zincire ekleme
         self.chain.append(block)
         self.pending_transactions = [
             {"from": "SYSTEM", "to": miner_address, "amount": self.mining_reward}
         ]
         self.save_chain()
 
-        # Loglama ekle
         logging.info(f"Block mined and added to chain. Index: {block.index}")
 
-        # Zincir doğruluğunu kontrol et
         if not self.is_chain_valid():
             logging.warning("Chain integrity might be compromised after mining!")
 
