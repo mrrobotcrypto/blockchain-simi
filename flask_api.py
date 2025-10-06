@@ -21,6 +21,30 @@ def get_chain():
     return jsonify(response), 200
 
 
+@app.route('/transactions/new', methods=['POST'])
+def new_transaction():
+    """Yeni bir işlem oluşturur."""
+    values = request.get_json()
+
+    # Gerekli alanlar
+    required = ['from', 'to', 'amount']
+    if not values:
+        return jsonify({"error": "Missing JSON body"}), 400
+
+    if not all(k in values for k in required):
+        return jsonify({"error": "Missing fields in transaction"}), 400
+
+    # İşlemi zincire ekle
+    blockchain.create_transaction(values['from'], values['to'], values['amount'])
+
+    response = {
+        "message": "Transaction added successfully",
+        "transaction": values
+    }
+    return jsonify(response), 201
+
+
+
 
 def index():
     return jsonify({
