@@ -63,3 +63,31 @@
 2025-10-06 14:53:44,104 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:44] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
 2025-10-06 14:53:44,956 - WARNING - API: Attempted to mine with no pending transactions.
 2025-10-06 14:53:44,957 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:44] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:58:11,125 - INFO - ✅ Logging system initialized.
+2025-10-06 14:58:11,126 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:58:12,416 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:58:12,416 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:58:15,793 - INFO - API: Balance requested for MrRobotCrypto - 0
+2025-10-06 14:58:15,794 - INFO - 127.0.0.1 - - [06/Oct/2025 14:58:15] "GET /balance/MrRobotCrypto HTTP/1.1" 200 -
+2025-10-06 14:59:21,299 - INFO - ✅ Logging system initialized.
+2025-10-06 14:59:21,300 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:59:22,603 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:59:22,603 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:59:30,376 - INFO - Transaction created: Alice -> MrRobotCrypto (5)
+2025-10-06 14:59:30,376 - INFO - API: New transaction added from Alice to MrRobotCrypto amount 5
+2025-10-06 14:59:30,377 - INFO - 127.0.0.1 - - [06/Oct/2025 14:59:30] "[35m[1mPOST /transactions/new HTTP/1.1[0m" 201 -
+2025-10-06 14:59:43,443 - INFO - Block mined successfully. Hash: 0003f36a484310480600fd26cc5426ea7596ec063579b8976165ee2bc661e8a1, Time: 0.02s
+2025-10-06 14:59:43,444 - INFO - Chain saved with 3 blocks.
+2025-10-06 14:59:43,444 - INFO - Block mined and added to chain. Index: 2
+2025-10-06 14:59:43,444 - INFO - API: New block mined and added to chain. Miner: MrRobotCrypto
+2025-10-06 14:59:43,444 - INFO - 127.0.0.1 - - [06/Oct/2025 14:59:43] "GET /mine?miner=MrRobotCrypto HTTP/1.1" 200 -
+2025-10-06 14:59:53,376 - INFO - API: Balance requested for MrRobotCrypto - 5
+2025-10-06 14:59:53,391 - INFO - 127.0.0.1 - - [06/Oct/2025 14:59:53] "GET /balance/MrRobotCrypto HTTP/1.1" 200 -
+2025-10-06 15:00:02,991 - INFO - API: Balance requested for MrRobotCrypto - 5
+2025-10-06 15:00:02,992 - INFO - 127.0.0.1 - - [06/Oct/2025 15:00:02] "GET /balance/MrRobotCrypto HTTP/1.1" 200 -
