@@ -41,6 +41,10 @@ if not isinstance(values['amount'], (int, float)) or values['amount'] <= 0:
 
     # İşlemi zincire ekle
     blockchain.create_transaction(values['from'], values['to'], values['amount'])
+logging.info(f"API: New transaction added from {values['from']} to {values['to']} amount {values['amount']}")
+
+
+
 
     response = {
         "message": "Transaction added successfully",
