@@ -12,3 +12,5 @@ It demonstrates how blocks, transactions, hashes, and proof-of-work mechanisms o
 ---
 
 **Author:** [mrrobotcrypto](https://github.com/mrrobotcrypto)
+
+![Blockchain Simulation](https://img.shields.io/badge/Blockchain-Simulation-blue)
