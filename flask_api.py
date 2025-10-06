@@ -88,6 +88,26 @@ def mine_block():
     return jsonify(response), 200
 
 
+@app.route('/balance/<address>', methods=['GET'])
+def get_balance(address):
+    """Belirtilen adresin bakiyesini döndürür."""
+    if not address.strip():
+        return jsonify({"error": "Address cannot be empty"}), 400
+
+    try:
+        balance = blockchain.get_balance(address)
+        print(f"🔍 Balance check for address: {address} -> {balance}")
+        logging.info(f"API: Balance requested for {address} - {balance}")
+        response = {
+            "address": address,
+            "balance": balance
+        }
+        return jsonify(response), 200
+    except Exception as e:
+        logging.error(f"Error fetching balance for {address}: {e}")
+        return jsonify({"error": "Could not retrieve balance"}), 500
+
+
 # Uygulamayı başlat
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
