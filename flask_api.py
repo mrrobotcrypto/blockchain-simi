@@ -9,6 +9,19 @@ blockchain = Blockchain(difficulty=3)
 
 # Ana endpoint
 @app.route('/')
+
+@app.route('/chain', methods=['GET'])
+def get_chain():
+    """Tüm blok zincirini JSON olarak döndürür."""
+    chain_data = [block.__dict__ for block in blockchain.chain]
+    response = {
+        "length": len(chain_data),
+        "chain": chain_data
+    }
+    return jsonify(response), 200
+
+
+
 def index():
     return jsonify({
         "message": "Welcome to the Blockchain API!",
