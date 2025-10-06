@@ -15,6 +15,9 @@ print("\n--- Balances ---")
 for name in ["Alice", "Bob", "Charlie", "Miner1"]:
     print(f"{name}: {chain.get_balance(name)}")
 
-print("\nChain valid?", chain.is_chain_valid())
 
+if chain.is_chain_valid():
+    print("\n✅ Blockchain integrity verified.")
+else:
+    print("\n❌ Blockchain integrity compromised!")
 
