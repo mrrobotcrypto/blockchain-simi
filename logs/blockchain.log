@@ -8,3 +8,58 @@
 2025-10-06 14:27:56,378 - INFO - Chain saved with 2 blocks.
 2025-10-06 14:27:56,379 - INFO - Block mined and added to chain. Index: 1
 2025-10-06 14:31:02,444 - INFO - ✅ Logging system initialized.
+2025-10-06 14:38:05,335 - INFO - ✅ Logging system initialized.
+2025-10-06 14:38:05,337 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:38:06,679 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:38:06,680 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:38:25,618 - INFO - 127.0.0.1 - - [06/Oct/2025 14:38:25] "GET / HTTP/1.1" 200 -
+2025-10-06 14:38:27,763 - INFO - 127.0.0.1 - - [06/Oct/2025 14:38:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-06 14:41:09,252 - INFO - ✅ Logging system initialized.
+2025-10-06 14:41:09,253 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:41:10,559 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:41:10,559 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:41:13,460 - INFO - 127.0.0.1 - - [06/Oct/2025 14:41:13] "GET /chain HTTP/1.1" 200 -
+2025-10-06 14:44:07,361 - INFO - ✅ Logging system initialized.
+2025-10-06 14:44:07,362 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:44:08,660 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:44:08,661 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:50:16,025 - INFO - ✅ Logging system initialized.
+2025-10-06 14:50:16,026 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:50:17,327 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:50:17,327 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:50:20,850 - INFO - 127.0.0.1 - - [06/Oct/2025 14:50:20] "GET / HTTP/1.1" 200 -
+2025-10-06 14:50:28,098 - INFO - 127.0.0.1 - - [06/Oct/2025 14:50:28] "GET /chain HTTP/1.1" 200 -
+2025-10-06 14:50:36,311 - INFO - 127.0.0.1 - - [06/Oct/2025 14:50:36] "[31m[1mGET /transactions/new HTTP/1.1[0m" 405 -
+2025-10-06 14:50:46,243 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:50:46,243 - INFO - 127.0.0.1 - - [06/Oct/2025 14:50:46] "[31m[1mGET /mine?miner=Ramazan HTTP/1.1[0m" 400 -
+2025-10-06 14:52:55,776 - INFO - ✅ Logging system initialized.
+2025-10-06 14:52:55,777 - INFO - Chain loaded successfully with 2 blocks.
+2025-10-06 14:52:57,074 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.113:5000
+2025-10-06 14:52:57,075 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 14:53:34,768 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:34,769 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:34] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:53:41,266 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:41,267 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:41] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:53:42,398 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:42,399 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:42] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:53:43,273 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:43,274 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:43] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:53:44,103 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:44,104 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:44] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
+2025-10-06 14:53:44,956 - WARNING - API: Attempted to mine with no pending transactions.
+2025-10-06 14:53:44,957 - INFO - 127.0.0.1 - - [06/Oct/2025 14:53:44] "[31m[1mGET /mine?miner=MrRobotCrypto HTTP/1.1[0m" 400 -
