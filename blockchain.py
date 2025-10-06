@@ -22,6 +22,7 @@ class Block:
             "nonce": self.nonce
         }, sort_keys=True).encode()
         return hashlib.sha256(block_string).hexdigest()
+start_time = time.time()
 
     def mine_block(self, difficulty: int):
         target = "0" * difficulty
@@ -29,6 +30,10 @@ class Block:
             self.nonce += 1
             self.hash = self.calculate_hash()
         print(f"✅ Block mined: {self.hash}")
+
+elapsed = time.time() - start_time
+print(f"⏱️ Mining completed in {elapsed:.2f} seconds.")
+
 
 
 class Blockchain:
@@ -99,3 +104,5 @@ class Blockchain:
             print("🌱 No existing chain found. Creating genesis block...")
             self.create_genesis_block()
 print(f"💾 Chain saved successfully with {len(self.chain)} blocks.")
+
+
