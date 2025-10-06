@@ -34,6 +34,11 @@ def new_transaction():
     if not all(k in values for k in required):
         return jsonify({"error": "Missing fields in transaction"}), 400
 
+
+if not isinstance(values['amount'], (int, float)) or values['amount'] <= 0:
+    return jsonify({"error": "Amount must be a positive number"}), 400
+
+
     # İşlemi zincire ekle
     blockchain.create_transaction(values['from'], values['to'], values['amount'])
 
