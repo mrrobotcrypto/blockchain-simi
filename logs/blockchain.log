@@ -1,0 +1,10 @@
+2025-10-06 14:27:56,367 - INFO - ✅ Logging system initialized.
+2025-10-06 14:27:56,368 - WARNING - No existing chain found. Creating genesis block...
+2025-10-06 14:27:56,368 - INFO - Chain saved with 1 blocks.
+2025-10-06 14:27:56,369 - INFO - Genesis block created.
+2025-10-06 14:27:56,369 - INFO - Transaction created: Alice -> Bob (20)
+2025-10-06 14:27:56,369 - INFO - Transaction created: Bob -> Charlie (5)
+2025-10-06 14:27:56,378 - INFO - Block mined successfully. Hash: 000cf5cf8692b9e821b1a41982af050a903ed6e779fed231cde362e9496d86a4, Time: 0.01s
+2025-10-06 14:27:56,378 - INFO - Chain saved with 2 blocks.
+2025-10-06 14:27:56,379 - INFO - Block mined and added to chain. Index: 1
+2025-10-06 14:31:02,444 - INFO - ✅ Logging system initialized.
